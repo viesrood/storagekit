@@ -1,5 +1,11 @@
 # Release Notes for StorageKit
 
+## 1.0.1 - 2026-10-07
+
+### Added
+
+- A plugin icon and its mask for the control panel.
+
 ## 1.0.0 - 2026-10-07
 
 ### Added
