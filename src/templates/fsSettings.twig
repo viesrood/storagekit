@@ -1,0 +1,79 @@
+{% import '_includes/forms.twig' as forms %}
+
+{{ forms.autosuggestField({
+    label: 'Endpoint',
+    instructions: 'The full S3 API endpoint, for example `https://<account>.r2.cloudflarestorage.com`.',
+    id: 'endpoint',
+    name: 'endpoint',
+    suggestEnvVars: true,
+    value: fs.endpoint,
+    errors: fs.getErrors('endpoint'),
+    required: true,
+    class: 'ltr',
+}) }}
+
+{{ forms.autosuggestField({
+    label: 'Region',
+    instructions: 'Cloudflare R2 uses `auto`. Other providers name a region.',
+    id: 'region',
+    name: 'region',
+    suggestEnvVars: true,
+    value: fs.region,
+    errors: fs.getErrors('region'),
+    required: true,
+    class: 'ltr',
+}) }}
+
+{{ forms.autosuggestField({
+    label: 'Bucket',
+    id: 'bucket',
+    name: 'bucket',
+    suggestEnvVars: true,
+    value: fs.bucket,
+    errors: fs.getErrors('bucket'),
+    required: true,
+    class: 'ltr',
+}) }}
+
+{{ forms.autosuggestField({
+    label: 'Access key ID',
+    instructions: 'Use an environment variable. A value typed here is stored in project config.',
+    id: 'keyId',
+    name: 'keyId',
+    suggestEnvVars: true,
+    value: fs.keyId,
+    errors: fs.getErrors('keyId'),
+    required: true,
+    class: 'ltr',
+}) }}
+
+{{ forms.autosuggestField({
+    label: 'Secret access key',
+    instructions: 'Use an environment variable. A value typed here is stored in project config.',
+    id: 'secret',
+    name: 'secret',
+    suggestEnvVars: true,
+    value: fs.secret,
+    errors: fs.getErrors('secret'),
+    required: true,
+    class: 'ltr',
+}) }}
+
+{{ forms.autosuggestField({
+    label: 'Subfolder',
+    instructions: 'An optional folder inside the bucket to use as the root of this filesystem.',
+    id: 'subfolder',
+    name: 'subfolder',
+    suggestEnvVars: true,
+    value: fs.subfolder,
+    errors: fs.getErrors('subfolder'),
+    class: 'ltr',
+}) }}
+
+{{ forms.lightswitchField({
+    label: 'Path-style addressing',
+    instructions: 'Address the bucket as `endpoint/bucket` instead of `bucket.endpoint`. Self-hosted servers usually need this; Cloudflare R2 does not.',
+    id: 'pathStyle',
+    name: 'pathStyle',
+    on: fs.pathStyle,
+}) }}

@@ -1,0 +1,10 @@
+/vendor
+composer.lock
+/.phpunit.cache/
+.DS_Store
+.idea
+*.log
+.proef-r2.php
+.proef-r2.sh
+.installeer.sh
+.check.sh

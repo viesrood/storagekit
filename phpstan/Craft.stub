@@ -1,0 +1,75 @@
+<?php
+
+class Craft
+{
+    public static CraftApplicationStub $app;
+
+    /** @param array<string, mixed> $params */
+    public static function t(string $category, string $message, array $params = [], ?string $language = null): string
+    {
+    }
+
+    public static function info(mixed $message, string $category = 'application'): void
+    {
+    }
+
+    public static function error(mixed $message, string $category = 'application'): void
+    {
+    }
+
+    public static function warning(mixed $message, string $category = 'application'): void
+    {
+    }
+
+    /** @param array<string, mixed> $config */
+    public static function createGuzzleClient(array $config = []): mixed
+    {
+    }
+}
+
+class CraftApplicationStub
+{
+    public function getCache(): mixed
+    {
+    }
+
+    public function getView(): mixed
+    {
+    }
+
+    public function getRequest(): mixed
+    {
+    }
+
+    public function getResponse(): mixed
+    {
+    }
+
+    public function getSites(): mixed
+    {
+    }
+
+    public function getSession(): mixed
+    {
+    }
+
+    public function getUser(): mixed
+    {
+    }
+
+    public function getDb(): mixed
+    {
+    }
+
+    public function getFormatter(): mixed
+    {
+    }
+
+    public function getUrlManager(): mixed
+    {
+    }
+
+    public function end(int $status = 0, mixed $response = null): void
+    {
+    }
+}

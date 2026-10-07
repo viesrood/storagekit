@@ -1,0 +1,14 @@
+parameters:
+    level: 6
+    bootstrapFiles:
+        - vendor/yiisoft/yii2/Yii.php
+        - vendor/craftcms/cms/src/Craft.php
+    stubFiles:
+        - phpstan/Craft.stub
+    treatPhpDocTypesAsCertain: false
+    paths:
+        - src
+        - tests
+    parallel:
+        maximumNumberOfProcesses: 1
+    tmpDir: /tmp/storagekit-phpstan
